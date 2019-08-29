@@ -1,0 +1,16 @@
+.content {
+    height: 100vh;
+    background-color: #fff;
+    padding: 50px;
+}
+
+.content h1 {
+    color: green;
+    font-weight: bold;
+    border-bottom: 1px solid green;
+}
+
+.content p {
+    text-align: justify;
+    color: #000;
+}

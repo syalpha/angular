@@ -1,0 +1,10 @@
+#loginform {
+    margin-top: 100px;
+    background: #fff;
+    filter: drop-shadow(3px 3px 3px gray)
+}
+
+#contentlogin {
+    background: #efefef;
+    height: 100vh;
+}
