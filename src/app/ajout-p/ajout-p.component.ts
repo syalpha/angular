@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-ajout-p',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AjoutPComponent implements OnInit {
 
-  constructor() { }
+  ajoutPUserData = {}
+  constructor( private _http: HttpClient   ) { }
 
   ngOnInit() {
   }
 
+  ajoutPUser(){
+    console.log(this.ajoutPUserData)
+  }
 }

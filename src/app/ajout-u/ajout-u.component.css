@@ -1,18 +1,25 @@
-#userform {
-    margin-top: 90px;
-    background: #fff;
-    filter: drop-shadow(3px 3px 3px gray);
-    background: #efefef;
-    border-radius: 3%;
-}
-
-#contentlogin {
-    background: #fff;
-    height: 100vh;
-}
-
-h2 {
-    font-size: 40px;
-    text-align: center;
-    margin-top: 0px;
-}
+    #userform {
+        margin-top: 10px;
+        background: #fff;
+        filter: drop-shadow(3px 3px 3px gray);
+        background: #efefef;
+        border-radius: 3%;
+    }
+    
+    #contentlogin {
+        background: #fff;
+        height: 100vh;
+    }
+    
+    h2 {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 0px;
+    }
+    
+    #btn {
+        background-color: green;
+        color: #fff;
+        width: 40%;
+        margin: auto;
+    }

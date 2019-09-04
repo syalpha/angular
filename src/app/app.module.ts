@@ -10,7 +10,10 @@ import { LoginComponent } from './login/login.component';
 import { AjoutPComponent } from './ajout-p/ajout-p.component';
 import { AjoutUComponent } from './ajout-u/ajout-u.component';
 import { CompteComponent } from './compte/compte.component';
-import { AuthService } from './auth.service';
+import { AuthService } from     './auth.service';
+import { ListeuComponent } from './listeu/listeu.component';
+import { ListepComponent } from './listep/listep.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +22,18 @@ import { AuthService } from './auth.service';
     LoginComponent,
     AjoutPComponent,
     AjoutUComponent,
-    CompteComponent
+    CompteComponent,
+    ListeuComponent,
+    ListepComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
+    
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

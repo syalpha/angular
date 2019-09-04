@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-ajout-u',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AjoutUComponent implements OnInit {
 
-  constructor() { }
+  ajoutUUserData = {}
+  _httpClient: any;
+  constructor(private _user: UserService) { }
 
   ngOnInit() {
   }
 
+  ajoutUUser() {
+    /* console.log(this.ajoutUUserData) */
+    this. _user.ajoutUUser(this.ajoutUUserData)
+      .subscribe(
+        res =>console.log(res),
+        err => console.log(err)
+      )
+  }
 }
