@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LisuService } from './lisu.service';
+import { User } from './user';
 
 @Component({
   selector: 'app-listeu',
@@ -6,10 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listeu.component.css']
 })
 export class ListeuComponent implements OnInit {
+  listeu: any;
+  _lisuService: any;
+  user: User[]
 
-  constructor() { }
+  constructor(private liste:LisuService) { }
 
   ngOnInit() {
+    this.getUse()
   }
+  getUse()
+  {
+    console.log(this.user)
+    this.liste.getUsers()
+    
+    .subscribe(
+      res=>{
+        this.user=res
+        console.log(this.user)
+},
+        err=> console.log(err)
+    )
+  }
+ 
 
+ 
 }

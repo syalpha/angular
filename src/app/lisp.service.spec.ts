@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AjoutService } from './ajout-p/ajout.service';
+import { LispService } from './lisp.service';
 
-describe('AjoutService', () => {
+describe('LispService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: AjoutService = TestBed.get(AjoutService);
+    const service: LispService = TestBed.get(LispService);
     expect(service).toBeTruthy();
   });
 });

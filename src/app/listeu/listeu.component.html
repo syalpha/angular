@@ -1,3 +1,27 @@
-<p>
-  listeu works!
-</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Username</th>
+            <th scope="col">Telephone</th>
+            <th scope="col">Adresse</th>
+            <th scope="col">Roles</th>
+            <th scope="col">Cni</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of user">
+            <td>{{user.id}}</td>
+            <td>{{user.nom}}</td>
+            <td>{{user.prenom}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.teluser}}</td>
+            <td>{{user.adresseuser}}</td>
+            <td>{{user.roles}}</td>
+            <td>{{user.cni}}</td>
+        </tr>
+
+    </tbody>
+</table>

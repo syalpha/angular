@@ -1,5 +1,5 @@
 <div class="ajout">
-    <h2>Ajouter Utilisateur</h2>
+    <h2>Ajouter Utilisateur Systeme</h2>
 </div>
 <div id="contentlogin">
     <div class="row">
@@ -9,12 +9,12 @@
 
                 <div class=" col-6 form-group">
                     <label for="username"> Username </label>
-                    <input [(ngModel)]="ajoutUUserData.username" name="username" type="text" id="user" class="form-control">
+                    <input [(ngModel)]="ajoutUUserData.username" name="username" type="text" id="user" class="form-control" required>
                 </div>
 
                 <div class=" col-6 form-group">
                     <label for="password"> password </label>
-                    <input [(ngModel)]="ajoutUUserData.password" name="password" type="password" id="pass" class="form-control">
+                    <input [(ngModel)]="ajoutUUserData.password" name="password" type="password" id="pass" class="form-control" required>
                 </div>
             </div>
 
@@ -22,12 +22,12 @@
 
                 <div class="col-6 form-group">
                     <label for="nom">Nom</label>
-                    <input [(ngModel)]="ajoutUUserData.nom" name="nom" type="text" id="nom" class="form-control">
+                    <input [(ngModel)]="ajoutUUserData.nom" name="nom" type="text" id="nom" class="form-control" required>
                 </div>
 
                 <div class="col-6 form-group">
                     <label for="prenom">Prenom</label>
-                    <input [(ngModel)]="ajoutUUserData.prenom" name="prenom" type="text" id="prenom" class="form-control">
+                    <input [(ngModel)]="ajoutUUserData.prenom" name="prenom" type="text" id="prenom" class="form-control" required>
                 </div>
             </div>
 
@@ -35,12 +35,12 @@
 
                 <div class="col-6 form-group">
                     <label for="adresseuser">Adresse</label>
-                    <input [(ngModel)]="ajoutUUserData.adresseuser" name="adresse" type="text" id="adresse" class="form-control">
+                    <input [(ngModel)]="ajoutUUserData.adresseuser" name="adresse" type="text" id="adresse" class="form-control" required>
                 </div>
 
                 <div class="col-6 form-group">
                     <label for="teluser">Telephone</label>
-                    <input [(ngModel)]="ajoutUUserData.teluser" name="telephone" type="number" id="tel" class="form-control">
+                    <input [(ngModel)]="ajoutUUserData.teluser" name="telephone" type="number" id="tel" class="form-control" required>
                 </div>
             </div>
 
@@ -48,15 +48,15 @@
 
                 <div class="col-6 form-group">
                     <label for="cni">CNI</label>
-                    <input [(ngModel)]="ajoutUUserData.cni" name="cni" type="text" id="cni" class="form-control">
+                    <input [(ngModel)]="ajoutUUserData.cni" name="cni" type="text" id="cni" class="form-control" required>
                 </div>
                 <div class="col-6 form-group">
-                    <select name="Roles" [(ngModel)]="ajoutUUserData.roles">
-                        <label for="roles">Roles</label>
-                        <option value="SA">SUPER_ADMIN</option>                        
-                        <option value="SA">ADMIN</option>                        
-                        <option value="SA">CAISSIER</option>    
-                    </select>
+                    <select name="Role" [(ngModel)]="ajoutUUserData.roles">
+                                    <option value="volvo">ADMIN</option>
+                                    <option value="saab">CAISSIER</option>
+                                    <option value="mercedes">Mercedes</option>
+                                    <option value="audi">Audi</option>
+                                  </select>
                 </div>
             </div>
 

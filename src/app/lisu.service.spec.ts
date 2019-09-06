@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AjoutService } from './ajout-p/ajout.service';
+import { LisuService } from './listeu/lisu.service';
 
-describe('AjoutService', () => {
+describe('LisuService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: AjoutService = TestBed.get(AjoutService);
+    const service: LisuService = TestBed.get(LisuService);
     expect(service).toBeTruthy();
   });
 });

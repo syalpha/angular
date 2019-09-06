@@ -10,7 +10,7 @@ export class UserService {
 
   roles: Array <string>
 
-  private _ajoutUUrl = "http://localhost:8000/user/new"
+  private _ajoutUUrl = "http://localhost:8000/user/new" 
 
   headers: { headers?: HttpHeaders | { [header: string]: string | string[]; }; observe: "events"; params?: HttpParams | { [param: string]: string | string[]; }; reportProgress?: boolean; responseType?: "json"; withCredentials?: boolean; };
   
@@ -30,4 +30,6 @@ export class UserService {
          /* formData.append('imageName',user.imageName); */ 
         return this.http.post<any>(endpoint, formData,this.headers);
   }
+
+  
 }

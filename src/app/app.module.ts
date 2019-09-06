@@ -10,10 +10,14 @@ import { LoginComponent } from './login/login.component';
 import { AjoutPComponent } from './ajout-p/ajout-p.component';
 import { AjoutUComponent } from './ajout-u/ajout-u.component';
 import { CompteComponent } from './compte/compte.component';
-import { AuthService } from     './auth.service';
+import { AuthService } from     './login/auth.service';
 import { ListeuComponent } from './listeu/listeu.component';
 import { ListepComponent } from './listep/listep.component';
 import { NavComponent } from './nav/nav.component';
+import { AjoutupComponent } from './ajoutup/ajoutup.component';
+import { UserService } from './ajout-u/user.service';
+import { AjoutService } from './ajout-p/ajout.service';
+import { LisuService } from './listeu/lisu.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import { NavComponent } from './nav/nav.component';
     CompteComponent,
     ListeuComponent,
     ListepComponent,
-    NavComponent
+    NavComponent,
+    AjoutupComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,7 @@ import { NavComponent } from './nav/nav.component';
     
     
   ],
-  providers: [AuthService],
+  providers: [AuthService, UserService, AjoutService, LisuService , LisuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

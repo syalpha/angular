@@ -1,3 +1,27 @@
-<p>
-  listep works!
-</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nomentreprise</th>
+            <th scope="col">Ninea</th>
+            <th scope="col">Numregistre</th>
+            <th scope="col">Telephone</th>
+            <th scope="col">Adresse</th>
+            <th scope="col">Email</th>
+            <th scope="col">Staut</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prestataire of prestataire">
+            <td>{{prestataire.id}}</td>
+            <td>{{prestataire.nomentreprise}}</td>
+            <td>{{prestataire.ninea}}</td>
+            <td>{{prestataire.numregistre}}</td>
+            <td>{{prestataire.telephone}}</td>
+            <td>{{prestataire.adresse}}</td>
+            <td>{{prestataire.email}}</td>
+            <td>{{prestataire.statut}}</td>
+        </tr>
+
+    </tbody>
+</table>

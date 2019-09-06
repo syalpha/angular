@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UserService } from '../user.service';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-ajout-u',
@@ -10,10 +10,13 @@ import { UserService } from '../user.service';
 export class AjoutUComponent implements OnInit {
 
   ajoutUUserData = {}
+  ajoutU = []
   _httpClient: any;
+  _userService: any;
   constructor(private _user: UserService) { }
 
   ngOnInit() {
+    
   }
 
   ajoutUUser() {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
+import { AuthService } from './auth.service';
+import { HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -7,6 +8,9 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  private headers={headers: new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('token'))};
+  
+  jwt: string;
 
   loginUserData = {}
   constructor(private _auth: AuthService) { }
@@ -18,8 +22,13 @@ export class LoginComponent implements OnInit {
     console.log(this.loginUserData)
     this._auth.loginUser(this.loginUserData)
       .subscribe(
-        res =>console.log(res),
-        err => console.log(err)
-      )
+        res =>{
+        localStorage.setItem('token',res.token)
+          console.log(localStorage)
+        },
+        err => {
+          return console.log(err)
+      
   }
-}
+  )
+}}

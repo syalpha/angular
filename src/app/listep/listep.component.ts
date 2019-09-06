@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LispService } from './lisp.service';
+import { prestataire } from './prestataire';
 
 @Component({
   selector: 'app-listep',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListepComponent implements OnInit {
 
-  constructor() { }
+  listep: any;
+  _lispService: any;
+  prestataire: prestataire[]
+
+  constructor(private liste:LispService) { }
 
   ngOnInit() {
+    this.getPres()
   }
-
+  
+  getPres()
+  {
+    console.log(this.prestataire)
+    this.liste.getPrest()
+    
+    .subscribe(
+      res=>{
+        this.prestataire=res
+        console.log(this.prestataire)
+},
+        err=> console.log(err)
+    )
+  }
 }
